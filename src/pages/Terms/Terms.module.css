@@ -1,0 +1,14 @@
+.terms{
+  display: flex;
+  max-width: 900px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  gap: 2rem;
+}
+
+.terms p{
+    color: #888;
+    font-size: 17px;
+}
