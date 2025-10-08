@@ -1,0 +1,175 @@
+.product{
+  max-width: 1500px; 
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;  
+  padding: 5rem 2rem; 
+  margin-left: 11.5rem;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.container2{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 15rem;
+}
+
+
+.containerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start; 
+}
+
+.containerRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end; 
+}
+
+
+.paragraphText{
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+
+.containerT{
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start; /* alinha o topo do círculo com o topo do texto */
+  gap: 0.8rem;   
+  margin-top: 1.2rem;
+}
+
+.containerP{
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start; /* alinha o topo do círculo com o topo do texto */
+  gap: 0.8rem;   
+  margin-top: 1.2rem;
+  margin-left: 1.5rem;
+}
+
+.subtitle{
+  margin-top: 2rem;
+}
+
+
+.paragraph p {
+  margin: 0;                /* remove margem padrão do parágrafo para não empurrar o círculo */
+  line-height: 1.5;        /* controla o espaçamento das linhas */
+}
+
+.paragraph h1 {
+  margin: 0;                /* remove margem padrão do parágrafo para não empurrar o círculo */
+  line-height: 1.5;         /* controla o espaçamento das linhas */
+}
+
+.circle {
+   display: inline-flex;     /* flex para melhor alinhamento vertical */
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid black;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-top: 0.2rem;
+}
+
+.circleBold{
+  display: inline-block;
+  border-bottom: 2.8px solid black; 
+  text-decoration-skip-ink: none;
+  padding: 4px 12px;
+  border: 1.7px solid black; /* Cor e espessura da borda */
+  border-radius: 50%; /* Torna a forma circular */
+  text-align: center;
+  font-family: 'Now', sans-serif;
+  font-weight: bold;
+}
+
+.imgGraph{
+    width: 250px;
+    height: 270px;
+    margin-right: 12rem;
+    margin-top: 8rem;
+}
+
+.star{
+    margin-top: 0.7
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.imgP{
+  width: 200px;
+  height: 180px;
+  margin-right: 18rem;
+}
+
+.imagesWrapper {
+  position: relative;
+  width: 600px; /* ajuste conforme necessário */
+  height: 500px; /* ajuste conforme necessário */
+  margin: 0 auto;
+}
+
+.image {
+  position: absolute;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.image:hover {
+  transform: scale(1.1); /* aumenta a imagem em 10% */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* adiciona sombra mais forte */
+  z-index: 999; /* garante que a imagem fique por cima das outras ao hover */
+}
+
+.base {
+  position: relative; 
+  max-width: 250px; 
+  width: 100%;
+  z-index: 1;
+  margin-left: 8rem;
+}
+
+.top {
+  top: -150px;
+  left: 280px;
+  transform: rotate(20deg);
+  z-index: 999;
+  max-width: 192px;
+}
+
+.bottom {   
+  top: 50px;
+  left: 360px;
+  transform: rotate(-10deg);
+  z-index: 3;
+  max-width: 195px;
+}
+
+.textImg{
+  margin-top: -10rem;
+  font-size: 16px;
+  margin-right: 5rem;
+  font-family: 'Now', sans-serif;
+}
