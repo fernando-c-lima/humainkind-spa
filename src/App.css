@@ -1,38 +1,209 @@
+/* App */
+html, body {
+  height: 100%;
+  margin: 0; /* tira espaçamento padrão */
+  padding: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* altura mínima da tela */
+}
+
+.App main {
+  flex: 1;
+}
+
+
+/* header style */
+
+.header {
+  display: flex; 
+  text-align: center;
+  margin: 20px 0;
+  justify-content: space-between;
+  flex-direction: row ;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 4em;
+}
+
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* altura do rasgo */
+  background: linear-gradient(to bottom, #cccccc, #b3b3b3); /* degradê cinza */
+  clip-path: polygon(
+    0 25%, 3% 12%, 7% 28%, 10% 8%, 15% 22%, 18% 5%, 23% 18%, 28% 2%, 33% 20%, 38% 5%, 
+    43% 18%, 48% 0%, 53% 20%, 58% 3%, 63% 22%, 68% 8%, 73% 25%, 78% 10%, 83% 20%, 88% 5%, 
+    93% 18%, 97% 8%, 100% 25%, 100% 0, 0 0
+  );
+  box-shadow: 
+    inset 0 4px 6px rgba(0,0,0,0.3),  /* sombra interna preta */
+    inset 0 -4px 6px rgba(255,255,255,0.4); /* sombra interna branca */
+  z-index: 1;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  font-size: 1.1em;
+}
+
+.logo h2 {
+  font-size: 2.5em;
+  margin: 0;
+  font-family: 'Lacquer', sans-serif;
+}
+
+
+.nav{
+  flex-direction: row;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav li {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.nav li:hover {
+  color: #555;
+  cursor: pointer;
+}
+
+/* footer styles */
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between ;
+  align-items: center;
+  gap: 7rem;
+  padding: 0 27rem; 
+  bottom: 0;
+  background-color: #f2f2f200;
+}
+
+.footer h3{
+  color: #777;
+  font-size: 1em;
+  margin: 0.2;
+}
+
+.footer .terms {
+  cursor: pointer; 
+  transition: color 0.3s; 
+}
+
+.footer .terms:hover {
+  color: #333; 
+
+}
+
+
+/* global */
+
+.underline{
+  position: relative;
+  border-bottom: 2px solid black;
+  display: inline;
+   transform: rotate(-2deg) skewX(-3deg);
+}
+
+.underlineBold{
+  font-weight: bold;
+  position: relative;
+  border-bottom: 2px solid black;
+  display: inline;
+   transform: rotate(-2deg) skewX(-3deg);
+}
+.circle {
+   display: inline-block;
+  border-bottom: 2.8px solid black; 
+  text-decoration-skip-ink: none;
+  padding: 4px 12px;
+  border: 1.7px solid black; /* Cor e espessura da borda */
+  border-radius: 50%; /* Torna a forma circular */
+  text-align: center;
+  font-family: 'Now', sans-serif;
+}
+
+.bold{
+  font-weight: bold;
+  font-family: 'Now', sans-serif;
+}
+
+.section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  transform: translateY(-20px);
+  opacity: 0.1;
+}
+
+.section-alt {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,     /* mantém branco no topo */
+    #f8f8f8 20%,    /* cinza um pouco mais visível logo */
+    #ededed 80%,    /* mais forte no meio */
+    #e0e0e0 95%     /* fecha levemente mais escuro */
+  );
+}
+
+button {
+  background: #0070f3;
   color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
